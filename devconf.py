@@ -87,11 +87,11 @@ PACKAGES = ["code make cmake build-essential", "python3-dev", "python3-pip"]
 """All config files stored in devconf"""
 CONFIGS = (
     Config(
-        Path("home_dir/.p10k.zsh"), home_path / Path(".p10k.zsh")
+        Path("configs/home_dir/.p10k.zsh"), home_path / Path(".p10k.zsh")
     ),  # powerline theme for zsh
-    Config(Path("home_dir/.zshrc"), home_path / Path(".zshrc")),  # zsh config
+    Config(Path("configs/home_dir/.zshrc"), home_path / Path(".zshrc")),  # zsh config
     Config(
-        Path("vscode_conf/settings.json"),
+        Path("configs/vscode_conf/settings.json"),
         home_path / Path(".config/Code/User/settings.json"),
     ),  # vscode settings.json
 )
