@@ -102,7 +102,7 @@ def run_script(script_path: Path):
 
 
 """Packages to install with apt"""
-PACKAGES = ["code vim make build-essential", "zsh", "python3-dev", "python3-pip"]
+PACKAGES = ["code vim make build-essential curl", "zsh neofetch", "python3-dev", "python3-pip"]
 
 """All config files stored in devconf"""
 CONFIGS = (
