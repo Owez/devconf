@@ -8,4 +8,4 @@ Ensure python3 is installed and run `devconf.py`. This is made for specifically 
 
 ## Configuring
 
-Change `CONFIGS` and `PACKAGES` in devconf.py to what you want.
+Change `CONFIGS` and `PACKAGES` in devconf.py to what you want. If you want to run anything before the process automatically, put it in `other.sh` which is ran before the rest.

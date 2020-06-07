@@ -96,6 +96,12 @@ CONFIGS = (
     ),  # vscode settings.json
 )
 
+print("Running shell script 'other.sh'..")
+
+if subprocess.call("/bin/bash -e other.sh", shell=True, stdout=subprocess.PIPE) != 0:
+    print("Failed to run contents of `other.sh`, exiting..", file=sys.stderr)
+    sys.exit(1)
+
 for packages in PACKAGES:
     fancysplit = "'" + "', '".join(packages.split(" ")) + "'"
 
