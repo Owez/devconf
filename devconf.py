@@ -22,6 +22,13 @@ home_path = Path("/home/") / input(
     "What is your home folder called? (e.g. 'owen' of '/home/owen'): "
 )
 
+if not home_path.exists():
+    print(
+        f"Given home directory '{home_path}' does not exist, please enter a valid /home/x path! Exiting..",
+        file=sys.stderr,
+    )
+    sys.exit(1)
+
 
 class Config:
     """Represents a config file stored locally in devconf"""
@@ -81,8 +88,21 @@ class Config:
             sys.exit(1)
 
 
+def run_script(script_path: Path):
+    """Runs a given shell script and exits with error if return code 1"""
+
+    print(f"Running shell script '{script_path.name}'..")
+
+    if subprocess.call(f"/bin/bash -e {script_path}", shell=True) != 0:
+        print(
+            f"Failed to run contents of `{script_path.name}`, exiting..",
+            file=sys.stderr,
+        )
+        sys.exit(1)
+
+
 """Packages to install with apt"""
-PACKAGES = ["code make cmake build-essential", "python3-dev", "python3-pip"]
+PACKAGES = ["code vim make build-essential", "python3-dev", "python3-pip"]
 
 """All config files stored in devconf"""
 CONFIGS = (
@@ -90,17 +110,20 @@ CONFIGS = (
         Path("configs/home_dir/.p10k.zsh"), home_path / Path(".p10k.zsh")
     ),  # powerline theme for zsh
     Config(Path("configs/home_dir/.zshrc"), home_path / Path(".zshrc")),  # zsh config
+    Config(Path("configs/home_dir/.vimrc"), home_path / Path(".vimrc")),  # vim config
     Config(
         Path("configs/vscode_conf/settings.json"),
         home_path / Path(".config/Code/User/settings.json"),
     ),  # vscode settings.json
 )
 
-print("Running shell script 'other.sh'..")
+"""Script to run before doing anything"""
+BEFORE_SCRIPT = Path("run_before.sh")
 
-if subprocess.call("/bin/bash -e other.sh", shell=True, stdout=subprocess.PIPE) != 0:
-    print("Failed to run contents of `other.sh`, exiting..", file=sys.stderr)
-    sys.exit(1)
+"""Script to run once finished installing"""
+AFTER_SCRIPT = Path("run_after.sh")
+
+run_script(Path(BEFORE_SCRIPT))  # run BEFORE_SCRIPT
 
 for packages in PACKAGES:
     fancysplit = "'" + "', '".join(packages.split(" ")) + "'"
@@ -120,6 +143,8 @@ for packages in PACKAGES:
 
 for config in CONFIGS:
     config.install()
+
+run_script(Path(AFTER_SCRIPT))  # run AFTER_SCRIPT
 
 while True:
     should_reboot = input("Reboot? [Y/n]: ").lower()
