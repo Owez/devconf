@@ -4,16 +4,6 @@
 # rm -rf ~/.powerlevel10k
 # git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.powerlevel10k
 
-# Install `hack` font (https://sourcefoundry.org/hack/#download)
-echo "Installing hack font.."
-rm -rf Hack-v3.003-ttf.zip
-wget https://github.com/source-foundry/Hack/releases/download/v3.003/Hack-v3.003-ttf.zip > /dev/null 2>&1
-yes | unzip Hack-v3.003-ttf.zip > /dev/null 2>&1
-mkdir -p ~/.local/share/fontss
-yes | cp -rf ttf/*ttf ~/.local/share/fonts/  > /dev/null 2>&1
-fc-cache -f -v > /dev/null 2>&1
-rm -rf ttf Hack-v3.003-ttf.zip
-
 # Change zsh to default shell
 echo "Setting zsh as default shell"
 chsh -s $(which zsh)
