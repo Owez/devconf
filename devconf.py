@@ -18,13 +18,11 @@ elif sys.platform != "linux":
     )
     sys.exit(1)
 
-home_path = Path("/home/") / input(
-    "What is your home folder called? (e.g. 'owen' of '/home/owen'): "
-)
+home_path = Path.home()
 
 if not home_path.exists():
     print(
-        f"Given home directory '{home_path}' does not exist, please enter a valid /home/x path! Exiting..",
+        f"Given home directory '{home_path}' does not exist; this shouldn't happen! Exiting..",
         file=sys.stderr,
     )
     sys.exit(1)
@@ -125,6 +123,9 @@ CONFIGS = (
 """Script to run before doing anything"""
 BEFORE_SCRIPT = Path("run_before.sh")
 
+"""Script to run once apt packages are installed but before configs are"""
+MID_SCRIPT = Path("run_mid.sh")
+
 """Script to run once finished installing"""
 AFTER_SCRIPT = Path("run_after.sh")
 
@@ -145,6 +146,8 @@ for packages in PACKAGES:
             f"Error installing apt package(s) {fancysplit}, exiting..", file=sys.stderr
         )
         sys.exit(1)
+
+run_script(Path(MID_SCRIPT))  # run MID_SCRIPT
 
 for config in CONFIGS:
     config.install()
