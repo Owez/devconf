@@ -120,10 +120,6 @@ CONFIGS = (
         Path("configs/home_dir/.aliases"), home_path / Path(".aliases")
     ),  # vim config
     Config(
-        Path("configs/jupyter/jupyter_notebook_config.py"),
-        home_path / Path(".jupyter/jupyter_notebook_config.py"),
-    ),  # jupyter config
-    Config(
         Path("configs/vscode_conf/settings.json"),
         home_path / Path(".config/Code/User/settings.json"),
     ),  # vscode settings.json
