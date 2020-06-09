@@ -5,9 +5,9 @@ import sys
 import subprocess
 from pathlib import Path
 
-if os.geteuid() == 0:
+if os.geteuid() != 0:
     print(
-        "Please run as a normal user then bump up to root when asked password!",
+        "Please run as root as this script installs apt packages! Exiting..",
         file=sys.stderr,
     )
     sys.exit(1)
@@ -18,7 +18,7 @@ elif sys.platform != "linux":
     )
     sys.exit(1)
 
-home_path = Path.home()
+home_path = Path("/home/") / input("Home dir to install to (e.g. 'owen' of '/home/owen'): ")
 
 if not home_path.exists():
     print(
@@ -114,9 +114,7 @@ CONFIGS = (
     ),  # powerline theme for zsh
     Config(Path("configs/home_dir/.zshrc"), home_path / Path(".zshrc")),  # zsh config
     Config(Path("configs/home_dir/.vimrc"), home_path / Path(".vimrc")),  # vim config
-    Config(
-        Path("configs/home_dir/.aliases"), home_path / Path(".aliases")
-    ),  # bash/zsh aliases
+    Config(Path("configs/home_dir/.aliases"), home_path / Path(".aliases")),  # vim config
     Config(
         Path("configs/vscode_conf/settings.json"),
         home_path / Path(".config/Code/User/settings.json"),
@@ -141,7 +139,7 @@ for packages in PACKAGES:
 
     if (
         subprocess.call(
-            f"sudo apt-get install {packages} -y", shell=True, stdout=subprocess.PIPE
+            f"apt-get install {packages} -y", shell=True, stdout=subprocess.PIPE
         )
         != 0
     ):
