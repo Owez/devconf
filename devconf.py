@@ -115,6 +115,9 @@ CONFIGS = (
     Config(Path("configs/home_dir/.zshrc"), home_path / Path(".zshrc")),  # zsh config
     Config(Path("configs/home_dir/.vimrc"), home_path / Path(".vimrc")),  # vim config
     Config(
+        Path("configs/home_dir/.aliases"), home_path / Path(".aliases")
+    ),  # bash/zsh aliases
+    Config(
         Path("configs/vscode_conf/settings.json"),
         home_path / Path(".config/Code/User/settings.json"),
     ),  # vscode settings.json
