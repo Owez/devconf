@@ -5,9 +5,9 @@ import sys
 import subprocess
 from pathlib import Path
 
-if os.geteuid() != 0:
+if os.geteuid() == 0:
     print(
-        "Please run as root as this script installs apt packages! Exiting..",
+        "Please run as a normal user then bump up to root when asked password!",
         file=sys.stderr,
     )
     sys.exit(1)
@@ -141,7 +141,7 @@ for packages in PACKAGES:
 
     if (
         subprocess.call(
-            f"apt-get install {packages} -y", shell=True, stdout=subprocess.PIPE
+            f"sudo apt-get install {packages} -y", shell=True, stdout=subprocess.PIPE
         )
         != 0
     ):
