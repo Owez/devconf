@@ -18,7 +18,9 @@ elif sys.platform != "linux":
     )
     sys.exit(1)
 
-home_path = Path("/home/") / input("Home dir to install to (e.g. 'owen' of '/home/owen'): ")
+home_path = Path("/home/") / input(
+    "Home dir to install to (e.g. 'owen' of '/home/owen'): "
+)
 
 if not home_path.exists():
     print(
@@ -114,7 +116,13 @@ CONFIGS = (
     ),  # powerline theme for zsh
     Config(Path("configs/home_dir/.zshrc"), home_path / Path(".zshrc")),  # zsh config
     Config(Path("configs/home_dir/.vimrc"), home_path / Path(".vimrc")),  # vim config
-    Config(Path("configs/home_dir/.aliases"), home_path / Path(".aliases")),  # vim config
+    Config(
+        Path("configs/home_dir/.aliases"), home_path / Path(".aliases")
+    ),  # vim config
+    Config(
+        Path("configs/jupyter/jupyter_notebook_config.py"),
+        home_path / Path(".jupyter/jupyter_notebook_config.py"),
+    ),  # jupyter config
     Config(
         Path("configs/vscode_conf/settings.json"),
         home_path / Path(".config/Code/User/settings.json"),

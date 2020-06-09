@@ -1,3 +1,4 @@
 # Contains shared aliases for .bashrc and .zshrc
 
-alias notebook="echo 'Launching notebook..' && nohup jupyter lab ~/notebooks >/dev/null 2>&1 &" # notebook for jupyter lab
+alias notebook="jupyter lab" # notebook for jupyter lab
+alias nb="jupyter lab" # notebook for jupyter lab other
