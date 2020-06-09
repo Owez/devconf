@@ -107,6 +107,7 @@ PACKAGES = [
     "zsh neofetch zip unzip",
     "python3-dev",
     "python3-pip",
+    "inkscape",
 ]
 
 """All config files stored in devconf"""
@@ -143,7 +144,9 @@ for packages in PACKAGES:
 
     if (
         subprocess.call(
-            f"apt-get install {packages} -y", shell=True, stdout=subprocess.PIPE
+            f"apt-get install {packages} -y > /dev/null 2>&1",
+            shell=True,
+            stdout=subprocess.PIPE,
         )
         != 0
     ):
