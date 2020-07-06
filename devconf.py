@@ -107,7 +107,6 @@ PACKAGES = [
     "zsh neofetch zip unzip",
     "python3-dev",
     "python3-pip",
-    "inkscape",
 ]
 
 """All config files stored in devconf"""
