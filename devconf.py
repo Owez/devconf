@@ -103,7 +103,7 @@ def run_script(script_path: Path):
 
 """Packages to install with apt"""
 PACKAGES = [
-    "code vim make build-essential curl wget fontconfig",
+    "vscodeium vim make build-essential curl wget fontconfig",
     "zsh neofetch zip unzip",
     "python3-dev",
     "python3-pip",
