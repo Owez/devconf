@@ -12,6 +12,5 @@ fc-cache -f -v > /dev/null 2>&1
 sudo rm -rf ttf Hack-v3.003-ttf.zip
 
 # Add ppa repository
-echo "Adding inkscape ppa repository.."
-sudo add-apt-repository ppa:inkscape.dev/stable -y > /dev/null 2>&1
-sudo apt update > /dev/null 2>&1
+echo "Updating APT and fixing any mismanaged sources.."
+sudo apt update -y --fix-missing
