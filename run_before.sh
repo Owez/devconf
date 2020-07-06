@@ -13,4 +13,4 @@ sudo rm -rf ttf Hack-v3.003-ttf.zip
 
 # Add ppa repository
 echo "Updating APT and fixing any mismanaged sources.."
-sudo apt update -y --fix-missing
+sudo apt update -y --fix-missing > /dev/null 2>&1
