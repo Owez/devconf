@@ -112,27 +112,23 @@ PACKAGES = [
 """All config files stored in devconf"""
 CONFIGS = (
     Config(
-        Path("configs/home_dir/.p10k.zsh"), home_path / Path(".p10k.zsh")
+        Path("scripts/configs/.p10k.zsh"), home_path / Path(".p10k.zsh")
     ),  # powerline theme for zsh
-    Config(Path("configs/home_dir/.zshrc"), home_path / Path(".zshrc")),  # zsh config
-    Config(Path("configs/home_dir/.vimrc"), home_path / Path(".vimrc")),  # vim config
+    Config(Path("scripts/configs/.zshrc"), home_path / Path(".zshrc")),  # zsh config
+    Config(Path("scripts/configs/.vimrc"), home_path / Path(".vimrc")),  # vim config
     Config(
-        Path("configs/home_dir/.aliases"), home_path / Path(".aliases")
+        Path("scripts/configs/.aliases"), home_path / Path(".aliases")
     ),  # vim config
-    Config(
-        Path("configs/vscode_conf/settings.json"),
-        home_path / Path(".config/Code/User/settings.json"),
-    ),  # vscode settings.json
 )
 
 """Script to run before doing anything"""
-BEFORE_SCRIPT = Path("run_before.sh")
+BEFORE_SCRIPT = Path("scripts/run_helper/run_before.sh")
 
 """Script to run once apt packages are installed but before configs are"""
-MID_SCRIPT = Path("run_mid.sh")
+MID_SCRIPT = Path("scripts/run_helper/run_mid.sh")
 
 """Script to run once finished installing"""
-AFTER_SCRIPT = Path("run_after.sh")
+AFTER_SCRIPT = Path("scripts/run_helper/run_after.sh")
 
 run_script(Path(BEFORE_SCRIPT))  # run BEFORE_SCRIPT
 

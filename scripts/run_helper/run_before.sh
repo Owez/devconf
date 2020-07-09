@@ -13,8 +13,8 @@ sudo rm -rf ttf Hack-v3.003-ttf.zip
 
 # Install vscodium's requirements
 echo "Adding VSCodium requirements.."
-wget -qO - https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg | sudo apt-key add -  > /dev/null 2>&1
-echo 'deb https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/repos/debs/ vscodium main' | sudo tee --append /etc/apt/sources.list.d/vscodium.list
+wget -qO - https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg | sudo apt-key add - > /dev/null 2>&1
+echo 'deb https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/repos/debs/ vscodium main' | sudo tee --append /etc/apt/sources.list.d/vscodium.list > /dev/null 2>&1
 
 # Add ppa repository
 echo "Updating apt packages and fixing any mismanaged sources.."
