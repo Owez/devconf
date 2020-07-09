@@ -33,7 +33,3 @@ And the following non-apt items are also installed:
 ## Running
 
 Simply run `./devconf.sh`. This is made for specifically ubuntu and it's derivatives (linux mint, kubuntu, xubuntu) but (should) work on debian.
-
-## Configuring/Customising for yourself
-
-Change `CONFIGS` and `PACKAGES` in devconf.py to what you want. If you want to run anything before the process automatically, put it in `run_before.sh` which is ran before the rest, `run_mid.sh` which is ran after apt packages are installed but before configs are applied and finally `run_after.sh`, which is ran after everything has completed.
