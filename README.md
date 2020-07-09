@@ -6,10 +6,12 @@ Contains my common config files to make a nice looking dev machine
 
 It is made for an ubuntu/ubuntu-derived enviroment (like xubuntu) and has been tested on `ubuntu`, `kubuntu` and `linux mint`. The following apt packages are installed when ran:
 
+- [python3](https://python.org)
 - [VSCodium](https://vscodium.com/)
 - [vim](https://en.wikipedia.org/wiki/Vim_(text_editor))
 - [make](https://en.wikipedia.org/wiki/Make_(software))
 - [build-essential](https://packages.debian.org/bullseye/build-essential)
+- [wget](https://en.wikipedia.org/wiki/Wget)
 - [curl](https://en.wikipedia.org/wiki/CURL)
 - [fontconfig](https://en.wikipedia.org/wiki/Fontconfig)
 - [zsh](https://en.wikipedia.org/wiki/Z_shell)
@@ -29,7 +31,7 @@ And the following non-apt items are also installed:
 
 ## Running
 
-Ensure python3 is installed and run `devconf.py`. This is made for specifically ubuntu and it's derivatives (linux mint, kubuntu, xubuntu) but (should) work on debian.
+Simply run `./devconf.sh`. This is made for specifically ubuntu and it's derivatives (linux mint, kubuntu, xubuntu) but (should) work on debian.
 
 ## Configuring/Customising for yourself
 
