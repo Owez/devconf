@@ -3,7 +3,6 @@
 # Intro
 echo "                         DEVCONF"
 echo "A simple script to auto install my development enviroment"
-echo "                   Tip: run me as sudo!"
 echo "---------------------------------------------------------"
 
 # Fix any bad apt packages
@@ -25,6 +24,8 @@ echo "Installing zsh.."
 sudo apt install zsh -y > /dev/null 2>&1
 echo "Installing neofetch.."
 sudo apt install neofetch -y > /dev/null 2>&1
+echo "Installing transmission-gtk.."
+sudo apt install transmission-gtk -y > /dev/null 2>&1
 echo "Installing zip.."
 sudo apt install zip -y > /dev/null 2>&1
 echo "Installing unzip.."
@@ -68,7 +69,10 @@ fi
 # Install oh-my-zsh
 echo "Installing oh-my-zsh.."
 rm -rf $HOME/.oh-my-zsh
+cur_dir=$PWD
+cd $HOME
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended > /dev/null 2>&1
+cd $cur_dir
 
 # Install powerlevel
 echo "Installing powerlevel10k theme for zsh.."

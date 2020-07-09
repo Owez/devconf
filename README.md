@@ -20,6 +20,7 @@ It is made for an ubuntu/ubuntu-derived enviroment (like xubuntu) and has been t
 - [unzip](https://packages.debian.org/buster/unzip)
 - [python3](https://en.wikipedia.org/wiki/Python_(programming_language))
 - [python3-dev](https://packages.debian.org/bullseye/python3-dev)
+- [transmission-gtk](https://en.wikipedia.org/wiki/Transmission_(BitTorrent_client))
 
 And the following non-apt items are also installed:
 
