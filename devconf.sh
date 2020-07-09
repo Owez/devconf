@@ -68,11 +68,8 @@ fi
 
 # Install oh-my-zsh
 echo "Installing oh-my-zsh.."
-rm -rf $HOME/.oh-my-zsh
-cur_dir=$PWD
-cd $HOME
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended > /dev/null 2>&1
-cd $cur_dir
+rm -rf $HOME/.oh-my-zsh/
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" "" --unattended > /dev/null 2>&1
 
 # Install powerlevel
 echo "Installing powerlevel10k theme for zsh.."
