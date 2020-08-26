@@ -33,3 +33,9 @@ And the following non-apt items are also installed:
 ## Running
 
 Simply run `./devconf.sh`. This is made for specifically ubuntu and it's derivatives (linux mint, kubuntu, xubuntu) but (should) work on debian.
+
+## Extras
+
+You may install extra field specfic tools by running one or more of the following scripts:
+
+- `bash pentesting.sh`: Common pentesting tools (focused on wireless)

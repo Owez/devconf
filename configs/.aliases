@@ -2,3 +2,4 @@
 
 alias notebook="jupyter lab --notebook-dir=~/notebooks" # notebook for jupyter lab
 alias nb="jupyter lab --notebook-dir=~/notebooks" # notebook for jupyter lab other
+alias airgeddon="sudo bash $HOME/Projects/tools/airgeddon/airgeddon.sh" # airgeddon (requires 'pentesting.sh')

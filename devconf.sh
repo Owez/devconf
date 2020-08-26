@@ -7,35 +7,39 @@ echo "---------------------------------------------------------"
 
 # Fix any bad apt packages
 echo "Updating apt packages and fixing any mismanaged sources.."
-sudo apt update -y --fix-missing > /dev/null 2>&1 
+sudo apt-get update -y --fix-missing > /dev/null 2>&1 
 
 # Install packages
 echo "Installing make.."
-sudo apt install make -y > /dev/null 2>&1
+sudo apt-get install make -y > /dev/null 2>&1
 echo "Installing build-essential.."
-sudo apt install build-essential -y > /dev/null 2>&1
+sudo apt-get install build-essential -y > /dev/null 2>&1
 echo "Installing wget.."
-sudo apt install wget -y > /dev/null 2>&1
+sudo apt-get install wget -y > /dev/null 2>&1
 echo "Installing curl.."
-sudo apt install curl -y > /dev/null 2>&1
+sudo apt-get install curl -y > /dev/null 2>&1
 echo "Installing fontconfig.."
-sudo apt install fontconfig -y > /dev/null 2>&1
+sudo apt-get install fontconfig -y > /dev/null 2>&1
 echo "Installing zsh.."
-sudo apt install zsh -y > /dev/null 2>&1
+sudo apt-get install zsh -y > /dev/null 2>&1
 echo "Installing neofetch.."
-sudo apt install neofetch -y > /dev/null 2>&1
+sudo apt-get install neofetch -y > /dev/null 2>&1
 echo "Installing transmission-gtk.."
-sudo apt install transmission-gtk -y > /dev/null 2>&1
+sudo apt-get install transmission-gtk -y > /dev/null 2>&1
+echo "Installing vim.."
+sudo apt-get install vim -y > /dev/null 2>&1
+echo "Installing htop.."
+sudo apt-get install htop -y > /dev/null 2>&1
 echo "Installing zip.."
-sudo apt install zip -y > /dev/null 2>&1
+sudo apt-get install zip -y > /dev/null 2>&1
 echo "Installing unzip.."
-sudo apt install unzip -y > /dev/null 2>&1
+sudo apt-get install unzip -y > /dev/null 2>&1
 echo "Installing python3.."
-sudo apt install python3 -y > /dev/null 2>&1
+sudo apt-get install python3 -y > /dev/null 2>&1
 echo "Installing python3-dev.."
-sudo apt install python3-dev -y > /dev/null 2>&1
+sudo apt-get install python3-dev -y > /dev/null 2>&1
 echo "Installing python3-pip.."
-sudo apt install python3-pip -y > /dev/null 2>&1
+sudo apt-get install python3-pip -y > /dev/null 2>&1
 
 # Install vscodium's requirements
 echo "Adding VSCodium requirements.."
@@ -44,7 +48,7 @@ echo 'deb https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/repos/debs/ v
 
 # Install vscodium
 echo "Installing codium.."
-sudo apt install codium -y > /dev/null 2>&1
+sudo apt-get install codium -y > /dev/null 2>&1
 
 # Install `hack` font (https://sourcefoundry.org/hack/#download)
 echo "Adding the 'hack' font.."
@@ -96,3 +100,6 @@ sudo cp configs/.zshrc $HOME
 # Set zsh as default shell
 echo "Setting zsh as the default shell.."
 sudo chsh -s $(which zsh)
+
+# Success exit message
+echo "Devconf finished successfully! You may want to try the extra scripts like 'pentesting.sh'"
