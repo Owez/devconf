@@ -1,13 +1,14 @@
 # devconf
 
-Contains my common config files to make a nice looking dev machine
+Contains my common config files to make a nice looking dev machine.
 
-## What it installs
+## What's included?
 
 It is made for an ubuntu/ubuntu-derived enviroment (like xubuntu) and has been tested on `ubuntu`, `kubuntu` and `linux mint`. The following apt packages are installed when ran:
 
 - [python3](https://python.org)
-- [VSCodium](https://vscodium.com/)
+- [code](https://code.visualstudio.com/)
+- [git](https://git-scm.com/)
 - [vim](https://en.wikipedia.org/wiki/Vim_(text_editor))
 - [make](https://en.wikipedia.org/wiki/Make_(software))
 - [build-essential](https://packages.debian.org/bullseye/build-essential)
@@ -32,7 +33,7 @@ And the following non-apt items are also installed:
 
 ## Running
 
-Simply run `./devconf.sh`. This is made for specifically ubuntu and it's derivatives (linux mint, kubuntu, xubuntu) but (should) work on debian.
+Simply run `./devconf.sh`. This is made for specifically ubuntu and it's derivatives (linux mint, kubuntu, xubuntu) but (should) work on debian. Make sure to change out the "Add git username/passwords" in the `devconf.sh` file or you'll be commiting using my email for git!
 
 ## Extras
 

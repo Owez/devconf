@@ -18,6 +18,8 @@ echo "Installing wget.."
 sudo apt-get install wget -y > /dev/null 2>&1
 echo "Installing curl.."
 sudo apt-get install curl -y > /dev/null 2>&1
+echo "Installing git.."
+sudo apt-get install git -y > /dev/null 2>&1
 echo "Installing fontconfig.."
 sudo apt-get install fontconfig -y > /dev/null 2>&1
 echo "Installing zsh.."
@@ -41,14 +43,9 @@ sudo apt-get install python3-dev -y > /dev/null 2>&1
 echo "Installing python3-pip.."
 sudo apt-get install python3-pip -y > /dev/null 2>&1
 
-# Install vscodium's requirements
-echo "Adding VSCodium requirements.."
-wget -qO - https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg | sudo apt-key add - > /dev/null 2>&1
-echo 'deb https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/repos/debs/ vscodium main' | sudo tee --append /etc/apt/sources.list.d/vscodium.list > /dev/null 2>&1
-
-# Install vscodium
-echo "Installing codium.."
-sudo apt-get install codium -y > /dev/null 2>&1
+# Add git username/passwords
+git config --global user.name "Owez"
+git config --global user.email "root@ogriffiths.com"
 
 # Install `hack` font (https://sourcefoundry.org/hack/#download)
 echo "Adding the 'hack' font.."
