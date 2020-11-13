@@ -2,6 +2,13 @@
 
 Contains my common config files to make a nice looking dev machine.
 
+- [Blog post](https://ogriffiths.com/2020/devconf)
+- One-liner install:
+  
+  ```shell
+  echo "INSTALLING.." && sudo apt install git -y && git clone https://github.com/owez/devconf && cd devconf/ && ./devconf.sh && cd .. && rm -rf devconf && echo "FINISHED!"
+  ```
+
 ## What's included?
 
 It is made for an ubuntu/ubuntu-derived enviroment (like xubuntu) and has been tested on `ubuntu`, `kubuntu` and `linux mint`. The following apt packages are installed when ran:
