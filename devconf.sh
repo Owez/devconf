@@ -42,6 +42,10 @@ echo "Installing python3-dev.."
 sudo apt-get install python3-dev -y > /dev/null 2>&1
 echo "Installing python3-pip.."
 sudo apt-get install python3-pip -y > /dev/null 2>&1
+echo "Installing pandoc.."
+sudo apt-get install pandoc -y > /dev/null 2>&1
+echo "Installing texlive-xetex.."
+sudo apt-get install texlive-xetex -y > /dev/null 2>&1
 
 # Add git username/passwords
 git config --global user.name "Owez"
