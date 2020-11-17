@@ -14,7 +14,6 @@ Contains my common config files to make a nice looking dev machine.
 It is made for an ubuntu/ubuntu-derived enviroment (like xubuntu) and has been tested on `ubuntu`, `kubuntu` and `linux mint`. The following apt packages are installed when ran:
 
 - [python3](https://python.org)
-- [code](https://code.visualstudio.com/)
 - [git](https://git-scm.com/)
 - [vim](https://en.wikipedia.org/wiki/Vim_(text_editor))
 - [make](https://en.wikipedia.org/wiki/Make_(software))
@@ -29,6 +28,8 @@ It is made for an ubuntu/ubuntu-derived enviroment (like xubuntu) and has been t
 - [python3](https://en.wikipedia.org/wiki/Python_(programming_language))
 - [python3-dev](https://packages.debian.org/bullseye/python3-dev)
 - [transmission-gtk](https://en.wikipedia.org/wiki/Transmission_(BitTorrent_client))
+- [pandoc](https://en.wikipedia.org/wiki/Pandoc)
+- [texlive-xetex](https://tug.org/texlive/)
 
 And the following non-apt items are also installed:
 
@@ -36,7 +37,6 @@ And the following non-apt items are also installed:
 - [powerlevel10k zsh theme](https://github.com/romkatv/powerlevel10k)
 - [oh-my-zsh (`zsh` plugin manager)](https://ohmyz.sh/)
 - [Rust + Cargo (via `rustup`)](https://en.wikipedia.org/wiki/Rust_(programming_language))
-- [Jupyter notebook + `nb` zsh alias](https://jupyter.org/)
 
 ## Running
 
