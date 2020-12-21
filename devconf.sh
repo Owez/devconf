@@ -60,20 +60,12 @@ echo "Installing mono-complete.."
 sudo apt-get install mono-complete -y > /dev/null 2>&1
 echo "Installing xclip.."
 sudo apt-get install xclip -y > /dev/null 2>&1
+echo "Installing fonts-hack.."
+sudo apt-get install fonts-hack -y > /dev/null 2>&1
 
 # Add git username/passwords
 git config --global user.name "Owez"
 git config --global user.email "root@ogriffiths.com"
-
-# Install `hack` font (https://sourcefoundry.org/hack/#download)
-echo "Adding the 'hack' font.."
-sudo rm -rf Hack-v3.003-ttf.zip
-wget https://github.com/source-foundry/Hack/releases/download/v3.003/Hack-v3.003-ttf.zip > /dev/null 2>&1
-yes | unzip Hack-v3.003-ttf.zip > /dev/null 2>&1
-mkdir -p $HOME/.local/share/fonts
-yes | cp -rf ttf/*ttf $HOME/.local/share/fonts/ > /dev/null 2>&1
-fc-cache -f -v > /dev/null 2>&1
-sudo rm -rf ttf Hack-v3.003-ttf.zip
 
 # Add background
 pic_dir=$HOME/Pictures

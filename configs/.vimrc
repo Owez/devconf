@@ -19,11 +19,7 @@ Plug 'vim-airline/vim-airline' " Core
 Plug 'vim-airline/vim-airline-themes' " Themes
 
 " Plugin autocomplete
-Plug 'ycm-core/YouCompleteMe', { 'do': './install.py' }
+Plug 'ycm-core/YouCompleteMe', { 'do': './install.py --rust-completer' }
 
 " Initialise plugins
 call plug#end()
-
-" Ensure plugins are installed
-:PlugInstall
-:q

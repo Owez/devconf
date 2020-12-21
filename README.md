@@ -37,10 +37,10 @@ It is made for an ubuntu/ubuntu-derived enviroment (like xubuntu) and has been t
 - [default-jdk](https://packages.ubuntu.com/search?keywords=default-jdk)
 - [mono-complete](https://packages.ubuntu.com/search?keywords=mono-complete)
 - [xclip](https://launchpad.net/xclip)
+- [fonts-hack](https://github.com/source-foundry/Hack)
 
 And the following non-apt items are also installed:
 
-- [`hack` font](https://sourcefoundry.org/hack/)
 - [powerlevel10k zsh theme](https://github.com/romkatv/powerlevel10k)
 - [YouCompleteMe autocompleter](https://github.com/ycm-core/YouCompleteMe)
 - [oh-my-zsh (`zsh` plugin manager)](https://ohmyz.sh/)
@@ -49,6 +49,8 @@ And the following non-apt items are also installed:
 ## Running
 
 Simply run `./devconf.sh`. This is made for specifically ubuntu and it's derivatives (linux mint, kubuntu, xubuntu) but (should) work on debian. Make sure to change out the "Add git username/passwords" in the `devconf.sh` file or you'll be commiting using my email for git!
+
+For the first time you run `vim`, no plugins will be installed. As vim uses the [`vim-plug`](https://github.com/junegunn/vim-plug) library, you'll have to type `:PlugInstall` when vim opens in order to install plugins such as the theme and autocompletion.
 
 ## Extras
 
