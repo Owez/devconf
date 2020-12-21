@@ -36,6 +36,7 @@ It is made for an ubuntu/ubuntu-derived enviroment (like xubuntu) and has been t
 - [npm](https://www.npmjs.com/)
 - [default-jdk](https://packages.ubuntu.com/search?keywords=default-jdk)
 - [mono-complete](https://packages.ubuntu.com/search?keywords=mono-complete)
+- [xclip](https://launchpad.net/xclip)
 
 And the following non-apt items are also installed:
 

@@ -58,6 +58,8 @@ echo "Installing default-jdk.."
 sudo apt-get install default-jdk -y > /dev/null 2>&1
 echo "Installing mono-complete.."
 sudo apt-get install mono-complete -y > /dev/null 2>&1
+echo "Installing xclip.."
+sudo apt-get install xclip -y > /dev/null 2>&1
 
 # Add git username/passwords
 git config --global user.name "Owez"
