@@ -30,11 +30,18 @@ It is made for an ubuntu/ubuntu-derived enviroment (like xubuntu) and has been t
 - [transmission-gtk](https://en.wikipedia.org/wiki/Transmission_(BitTorrent_client))
 - [pandoc](https://en.wikipedia.org/wiki/Pandoc)
 - [texlive-xetex](https://tug.org/texlive/)
+- [cmake](https://en.wikipedia.org/wiki/CMake)
+- [golang](https://golang.org/)
+- [node-js](https://nodejs.org/)
+- [npm](https://www.npmjs.com/)
+- [default-jdk](https://packages.ubuntu.com/search?keywords=default-jdk)
+- [mono-complete](https://packages.ubuntu.com/search?keywords=mono-complete)
 
 And the following non-apt items are also installed:
 
 - [`hack` font](https://sourcefoundry.org/hack/)
 - [powerlevel10k zsh theme](https://github.com/romkatv/powerlevel10k)
+- [YouCompleteMe autocompleter](https://github.com/ycm-core/YouCompleteMe)
 - [oh-my-zsh (`zsh` plugin manager)](https://ohmyz.sh/)
 - [Rust + Cargo (via `rustup`)](https://en.wikipedia.org/wiki/Rust_(programming_language))
 

@@ -46,6 +46,18 @@ echo "Installing pandoc.."
 sudo apt-get install pandoc -y > /dev/null 2>&1
 echo "Installing texlive-xetex.."
 sudo apt-get install texlive-xetex -y > /dev/null 2>&1
+echo "Installing cmake.."
+sudo apt-get install cmake -y > /dev/null 2>&1
+echo "Installing golang.."
+sudo apt-get install golang -y > /dev/null 2>&1
+echo "Installing node-js.."
+sudo apt-get install node-js -y > /dev/null 2>&1
+echo "Installing npm.."
+sudo apt-get install npm -y > /dev/null 2>&1
+echo "Installing default-jdk.."
+sudo apt-get install default-jdk -y > /dev/null 2>&1
+echo "Installing mono-complete.."
+sudo apt-get install mono-complete -y > /dev/null 2>&1
 
 # Add git username/passwords
 git config --global user.name "Owez"
