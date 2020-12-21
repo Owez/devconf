@@ -18,6 +18,9 @@ call plug#begin('~/.vim/plugged')
 Plug 'vim-airline/vim-airline' " Core
 Plug 'vim-airline/vim-airline-themes' " Themes
 
+" Plugin sensible vim setup
+Plug 'tpope/vim-sensible'
+
 " Plugin autocomplete
 Plug 'ycm-core/YouCompleteMe', { 'do': './install.py --rust-completer' }
 
