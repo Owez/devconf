@@ -50,7 +50,7 @@ And the following non-apt items are also installed:
 
 Simply run `./devconf.sh`. This is made for specifically ubuntu and it's derivatives (linux mint, kubuntu, xubuntu) but (should) work on debian. Make sure to change out the "Add git username/passwords" in the `devconf.sh` file or you'll be commiting using my email for git!
 
-For the first time you run `vim`, no plugins will be installed. As vim uses the [`vim-plug`](https://github.com/junegunn/vim-plug) library, you'll have to type `:PlugInstall` when vim opens in order to install plugins such as the theme and autocompletion.
+For the first time you run `vim`, no plugins will be installed. As vim uses the [`vim-plug`](https://github.com/junegunn/vim-plug) library, you'll have to type `:PlugInstall` when vim opens in order to install plugins such as the theme and autocompletion. You will then have to restart vim in order for plugins to properly function, such as [NERDTree](https://github.com/preservim/nerdtree).
 
 ## Extras
 

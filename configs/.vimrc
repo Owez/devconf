@@ -17,15 +17,22 @@ endif
 " Start plugin definitions
 call plug#begin('~/.vim/plugged')
 
-" Plugin Airline (like powerline which is like powerlevel10k)
-Plug 'vim-airline/vim-airline' " Core
-Plug 'vim-airline/vim-airline-themes' " Themes
-
-" Plugin sensible vim setup
-Plug 'tpope/vim-sensible'
-
-" Plugin autocomplete
-Plug 'ycm-core/YouCompleteMe', { 'do': './install.py --rust-completer' }
+" Plugins added
+Plug 'vim-airline/vim-airline' " Airline core
+Plug 'vim-airline/vim-airline-themes' " Airline common themes
+Plug 'tpope/vim-sensible' " Sensible vim
+Plug 'ycm-core/YouCompleteMe', { 'do': './install.py --rust-completer' } " Autocomplete
+Plug 'scrooloose/nerdtree' " NERDTree file sidebar
 
 " Initialise plugins
 call plug#end()
+
+" NERDTree configuration
+if exists('NERDTree')
+    " Start NERDTree and put the cursor back in the other window.
+    autocmd VimEnter * NERDTree | wincmd p
+    
+    " Exit Vim if NERDTree is the only window left.
+    autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() |
+        \ quit | endif
+endif
