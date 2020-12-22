@@ -20,19 +20,18 @@ Plug 'vim-airline/vim-airline' " Airline core
 Plug 'vim-airline/vim-airline-themes' " Airline common themes
 Plug 'tpope/vim-sensible' " Sensible vim
 Plug 'ycm-core/YouCompleteMe', { 'do': './install.py --rust-completer' } " Autocomplete
-Plug 'scrooloose/nerdtree' " NERDTree file sidebar
+Plug 'preservim/nerdtree' " NERDTree file sidebar
 call plug#end()
 
-" Autoinstall plugins if non existant
+" Autoinstall plugins
 autocmd VimEnter *
   \  if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
-  \|   PlugInstall --sync " Install missing plugins
-  \|   :qa
+  \|   PlugInstall --sync | q
   \| endif
 
 " Start NERDTree and put the cursor back in the other window.
 autocmd VimEnter * NERDTree | wincmd p
-    
+
 " Exit Vim if NERDTree is the only window left.
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() |
     \ quit | endif
