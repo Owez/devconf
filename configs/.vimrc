@@ -2,16 +2,16 @@
 set number
 
 " Tabstops
-set tabstop=4       " Size of a hard tabstop
-set shiftwidth=4    " Indents will have a width of 4
-set softtabstop=4   " Sets the number of columns for a TAB
-set expandtab       " Expand TABs to spaces
+set tabstop=4 " Size of a hard tabstop
+set shiftwidth=4 " Indents will have a width of 4
+set softtabstop=4 " Sets the number of columns for a TAB
+set expandtab " Expand TABs to spaces
 
 " Column 80 and 120 rulers for visual indication
 set colorcolumn=80
 highlight ColorColumn ctermbg=237
 
-" Auto-install https://github.com/junegunn/vim-plug/ if not already
+" Auto-install vim-plug if not already
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
