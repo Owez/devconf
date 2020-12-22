@@ -41,6 +41,7 @@ It is made for an ubuntu/ubuntu-derived enviroment (like xubuntu) and has been t
 
 And the following non-apt items are also installed:
 
+- [Pygments](https://pygments.org/)
 - [powerlevel10k zsh theme](https://github.com/romkatv/powerlevel10k)
 - [YouCompleteMe autocompleter](https://github.com/ycm-core/YouCompleteMe)
 - [oh-my-zsh (`zsh` plugin manager)](https://ohmyz.sh/)

@@ -90,9 +90,8 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~
 echo "Installing rust and cargo.."
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | bash -s -- -y > /dev/null 2>&1
 
-# Install jupyter notebook
-echo "Installing jupyter notebook (jupyterlab).."
-sudo pip3 install jupyterlab > /dev/null 2>&1
+# Install Pygments
+pip3 install Pygments -y > /dev/null 2>&1
 
 # Apply configs
 echo "Applying .aliases.."
