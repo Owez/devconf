@@ -14,25 +14,25 @@ if empty(glob('~/.vim/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
-" Start plugin definitions
+" Plugin definitions
 call plug#begin('~/.vim/plugged')
-
-" Plugins added
 Plug 'vim-airline/vim-airline' " Airline core
 Plug 'vim-airline/vim-airline-themes' " Airline common themes
 Plug 'tpope/vim-sensible' " Sensible vim
 Plug 'ycm-core/YouCompleteMe', { 'do': './install.py --rust-completer' } " Autocomplete
 Plug 'scrooloose/nerdtree' " NERDTree file sidebar
-
-" Initialise plugins
 call plug#end()
 
-" NERDTree configuration
-if exists('NERDTree')
-    " Start NERDTree and put the cursor back in the other window.
-    autocmd VimEnter * NERDTree | wincmd p
+" Autoinstall plugins if non existant
+autocmd VimEnter *
+  \  if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
+  \|   PlugInstall --sync " Install missing plugins
+  \|   :qa
+  \| endif
+
+" Start NERDTree and put the cursor back in the other window.
+autocmd VimEnter * NERDTree | wincmd p
     
-    " Exit Vim if NERDTree is the only window left.
-    autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() |
-        \ quit | endif
-endif
+" Exit Vim if NERDTree is the only window left.
+autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() |
+    \ quit | endif
