@@ -1,5 +1,4 @@
 # Contains shared aliases for .bashrc and .zshrc
 
 alias airgeddon="sudo bash $HOME/Hack/airgeddon/airgeddon.sh" # airgeddon (requires 'pentesting.sh')
-alias c='pygmentize -g -O style=colorful,linenos=1' # c (cat-like) syntax highlighting
-
+alias c="pygmentize -g" # c (cat-like) syntax highlighting
