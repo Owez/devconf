@@ -1,3 +1,6 @@
+" Line numbers
+set number
+
 " Tabstops
 set tabstop=4       " Size of a hard tabstop
 set shiftwidth=4    " Indents will have a width of 4
