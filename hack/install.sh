@@ -31,4 +31,9 @@ then
     rm -f SecList.zip
 fi
 
+if [ ! -d sqlmap ]
+then
+    git clone --depth 1 https://github.com/sqlmapproject/sqlmap.git
+fi
+
 cd $cwd

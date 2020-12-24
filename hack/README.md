@@ -12,3 +12,4 @@ Contains auto-installer for hacking-related files using the `install.sh` script
 - Installs airgeddon to `Hack` directory
 - Installs dirsearch to `Hack` directory
 - Installs SecLists to `Hack` directory
+- Installs sqlmap to `Hack` directory
