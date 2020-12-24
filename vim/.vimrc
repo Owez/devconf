@@ -50,5 +50,8 @@ autocmd VimEnter * NERDTree | if argc() > 0 || exists("s:std_in") | wincmd p | e
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() |
     \ quit | endif
 
-" NERDTree options
-let NERDTreeShowHidden=1
+" NERDTree config options
+let NERDTreeShowHidden=1 " Show NERDtree hidden files
+let g:airline_powerline_fonts = 1 " Auto-populate powerline fonts
+let g:NERDTreeDirArrowExpandable = '+'
+let g:NERDTreeDirArrowCollapsible = '-'
