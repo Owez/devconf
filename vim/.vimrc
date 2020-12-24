@@ -11,6 +11,15 @@ set expandtab " Expand TABs to spaces
 set colorcolumn=80
 highlight ColorColumn ctermbg=237
 
+" Bracket autoclose
+inoremap " ""<left>
+inoremap ' ''<left>
+inoremap ( ()<left>
+inoremap [ []<left>
+inoremap { {}<left>
+inoremap {<CR> {<CR>}<ESC>O
+inoremap {;<CR> {<CR>};<ESC>O
+
 " Auto-install vim-plug if not already
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
