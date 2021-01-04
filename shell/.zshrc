@@ -22,3 +22,8 @@ source $ZSH/oh-my-zsh.sh
 if [ -f ~/.aliases ]; then
   . ~/.aliases
 fi
+
+# cat todo to console on boot
+if [ -f ~/todo.txt ]; then
+    cat ~/todo.txt
+fi
