@@ -1,6 +1,9 @@
 " Line numbers
 set number
 
+" Make cursor into line
+set cursorline
+
 " Tabstops
 set tabstop=4 " Size of a hard tabstop
 set shiftwidth=4 " Indents will have a width of 4
@@ -34,6 +37,7 @@ Plug 'vim-airline/vim-airline-themes' " Airline common themes
 Plug 'tpope/vim-sensible' " Sensible vim
 Plug 'ycm-core/YouCompleteMe', { 'do': './install.py --rust-completer' } " Autocomplete
 Plug 'preservim/nerdtree' " NERDTree file sidebar
+Plug 'sonph/onehalf', { 'rtp': 'vim' } " Theme
 call plug#end()
 
 " Autoinstall plugins
@@ -41,6 +45,10 @@ autocmd VimEnter *
   \  if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
   \|   PlugInstall --sync | q
   \| endif
+
+" Set themes
+colorscheme onehalfdark
+let g:airline_theme='deus'
 
 " Start NERDTree. If a file is specified, move the cursor to its window.
 autocmd StdinReadPre * let s:std_in=1
@@ -53,5 +61,6 @@ autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTr
 " NERDTree config options
 let NERDTreeShowHidden=1 " Show NERDtree hidden files
 let g:airline_powerline_fonts = 1 " Auto-populate powerline fonts
-let g:NERDTreeDirArrowExpandable = '+'
-let g:NERDTreeDirArrowCollapsible = '-'
+let g:NERDTreeDirArrowExpandable = '+' " Arrow
+let g:NERDTreeDirArrowCollapsible = '-' " Arrow
+let g:NERDTreeWinSize=20 " Window width
