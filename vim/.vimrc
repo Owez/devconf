@@ -23,6 +23,12 @@ inoremap { {}<left>
 inoremap {<CR> {<CR>}<ESC>O
 inoremap {;<CR> {<CR>};<ESC>O
 
+" Map keys for `:term`
+if has('terminal')
+    set termwinsize=12x0
+    map <C-t> :bel term<CR>
+endif
+
 " Auto-install vim-plug if not already
 if empty(glob('~/.vim/autoload/plug.vim'))
     silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
