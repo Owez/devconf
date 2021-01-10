@@ -23,9 +23,24 @@ inoremap { {}<left>
 inoremap {<CR> {<CR>}<ESC>O
 inoremap {;<CR> {<CR>};<ESC>O
 
-" Map keys for `:term`
+" Hotswap sessions
+noremap <C-j> <C-W>j
+noremap <C-k> <C-W>k
+noremap <C-h> <C-W>h
+noremap <C-l> <C-W>l
+
+" Terminal options
 if has('terminal')
+    " Set terminal size
     set termwinsize=12x0
+
+    " Hotswap sessions inside terminal also
+    tnoremap <C-j> <C-W>j
+    tnoremap <C-k> <C-W>k
+    tnoremap <C-h> <C-W>h
+    tnoremap <C-l> <C-W>l
+
+    " Map ctrl+t to below terminal
     map <C-t> :bel term<CR>
 endif
 
