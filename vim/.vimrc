@@ -43,12 +43,15 @@ call plug#end()
 " Autoinstall plugins
 autocmd VimEnter *
   \  if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
-  \|   PlugInstall --sync | q
+  \|   PlugInstall --sync | qa
   \| endif
 
 " Set themes
 colorscheme onehalfdark
 let g:airline_theme='deus'
+
+" Allow scroll to be visible 2 chars down
+set scrolloff=2
 
 " Start NERDTree. If a file is specified, move the cursor to its window.
 autocmd StdinReadPre * let s:std_in=1
