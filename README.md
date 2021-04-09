@@ -1,11 +1,7 @@
 # devconf
 
-Contains my common config files to make a nice looking dev machine.
+Contains my common config files to make a nice looking dev machine
 
-## Installing
+## Installation
 
-Each folder, such as `vim/` contains tool-specific `install.sh` files which will automatically install what the given `README.md`'s say. Here's an overview of the usage of each directory:
-
-- `misc/`: Majority of apt installs, contains misc development packages/setups
-- `shell/`: ZSH and aliases setup
-- `vim/`: Custom vimrc and general vim setup
+Run the `devconf.py` file in a Python 3.8+ interpreter on a new Manjaro machine with an i3 window manager pre-installed, or manually copy files at your leisure. 

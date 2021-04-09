@@ -1,6 +1,0 @@
-# Contains shared aliases for .bashrc and .zshrc
-
-alias airgeddon="sudo bash $HOME/Hack/airgeddon/airgeddon.sh" # airgeddon (requires 'pentesting.sh')
-alias c="pygmentize -g" # c (cat-like) syntax highlighting
-alias v="vim" # vim
-alias vl='vim -c "normal '\''0"' # open last vim
