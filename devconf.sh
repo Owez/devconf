@@ -1,13 +1,8 @@
 # autoinstaller
 
-packages=(
-	"curl"
-	"firefox"
-	"code"
-)
-
-for package in ${packages[@]}
-do
+# basic packages
+packages=("curl" "firefox" "code")
+for package in ${packages[@]}; do
 	sudo pacman --noconfirm -S $package
 done
 
