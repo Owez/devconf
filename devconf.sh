@@ -4,6 +4,9 @@
 sudo pacman --noconfirm -S reflector
 reflector --verbose --latest 5 --sort rate --save /etc/pacman.d/mirrorlist
 
+# remove hexchat bloat
+sudo pacman --noconfirm -R hexchat
+
 # update existing
 pacman --noconfirm -Syu
 
@@ -14,7 +17,7 @@ for package in ${packages[@]}; do
 done
 
 # aur packages
-aurs=("spotify" "visual-studio-code-bin")
+aurs=("visual-studio-code-bin")
 for aur in ${aurs[@]}; do
 	yes | sudo pamac build $aur
 done
