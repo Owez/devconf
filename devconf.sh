@@ -16,7 +16,7 @@ done
 # aur packages
 aurs=("spotify" "visual-studio-code-bin")
 for aur in ${aurs[@]}; do
-	pamac build $aur
+	sudo pamac build $aur
 done
 
 # install rust via rustup
