@@ -8,9 +8,15 @@ reflector --verbose --latest 5 --sort rate --save /etc/pacman.d/mirrorlist
 pacman --noconfirm -Syu
 
 # basic packages
-packages=("python" "vim" "curl" "wget" "firefox" "transmission-gtk" "spotify" "inkscape" "gimp" "discord" "audacity")
+packages=("python" "vim" "curl" "wget" "firefox" "transmission-gtk" "inkscape" "gimp" "discord" "audacity")
 for package in ${packages[@]}; do
 	sudo pacman --noconfirm -S $package
+done
+
+# aur packages
+aurs=("spotify" "visual-studio-code-bin")
+for aur in ${aurs[@]}; do
+	pamac build $aur
 done
 
 # install rust via rustup
@@ -18,9 +24,6 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 # install pulseaudio
 install_pulse
-
-# install vscode
-pamac build "visual-studio-code-bin" 
 
 # install vscode extensions
 extensions=("adpyke.vscode-sql-formatter" "aeschli.vscode-css-formatter" "matklad.rust-analyzer" "ms-python.python" "ms-toolsai.jupyter" "PKief.material-icon-theme" "streetsidesoftware.code-spell-checker" "tomoki1207.pdf" "VisualStudioExptTeam.vscodeintellicode" "whizkydee.material-palenight-theme" "yzhang.markdown-all-in-one")
