@@ -11,7 +11,7 @@ sudo pacman --noconfirm -R hexchat
 pacman --noconfirm -Syu
 
 # basic packages
-packages=("python" "vim" "curl" "wget" "firefox" "transmission-gtk" "inkscape" "gimp" "discord" "audacity")
+packages=("python" "vim" "curl" "wget" "firefox-developer-edition" "transmission-gtk" "inkscape" "gimp" "discord" "audacity")
 for package in ${packages[@]}; do
 	sudo pacman --noconfirm -S $package
 done
@@ -37,7 +37,8 @@ done
 # apply files
 cd files/
 cp 30-touchpad.conf /etc/X11/xorg.conf.d/30-touchpad.conf
-cp i3config $HOME/.i3/config
+cp .vimrc $HOME/.vimrc
+cp -r .vim/ $HOME/.vim/
 
 # configure enviroment
 mkdir school
