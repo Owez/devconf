@@ -60,3 +60,9 @@ nitrogen /usr/share/backgrounds/sand-dunes.jpg
 
 # ohmyzsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+# vim setup
+git clone --depth 1 https://github.com/codota/tabnine-vim
+sudo mv tabnine-vim $HOME/.vim/tabnine-vim
+git clone https://github.com/preservim/nerdtree.git ~/.vim/pack/vendor/start/nerdtree
+vim -u NONE -c "helptags ~/.vim/pack/vendor/start/nerdtree/doc" -c q

@@ -1,3 +1,6 @@
+" mouse
+set mouse=a
+
 " line numbers
 set number
 
@@ -18,3 +21,19 @@ set backspace=indent,eol,start
 syntax on
 colorscheme onedark
 let g:airline_theme='onedark'
+
+" silly
+cnoreabbrev W w
+cnoreabbrev Wq wq
+
+" nerdtree
+let g:NERDTreeWinSize=24
+autocmd VimEnter * NERDTree | wincmd p
+autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() |
+    \ quit | endif
+
+" tabnine (cc)
+set rtp+=~/.vim/tabnine-vim
+
+" black (cc)
+nnoremap <C-S-i> :Black<CR>
